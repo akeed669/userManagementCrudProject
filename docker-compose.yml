@@ -1,0 +1,51 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    # restart: on-failure
+    ports:
+      - 27017:27017
+    networks:
+      - my-network
+    volumes:
+      - mongodb:/data/db
+  api-server:
+    image: akeedm/nodecrudapp:latest
+    restart: always
+    build:
+      context: ./simpleUserManagementBackEnd
+      dockerfile: Dockerfile    
+    # environment:
+    #   - MONGO_URI=mongodb://db:27017/mydb
+    # command: npm start
+    depends_on:
+      - mongo
+    networks: 
+      - my-network
+    # volumes:
+    #   - .:/usr/app/
+    #   - /usr/app/node_modules
+    ports:
+      - "3001:3001"
+    # links:
+    #   - database
+  react-ui:
+    image: akeedm/reactcrudapp:latest
+    stdin_open: true
+    restart: always
+    build:
+      context: ./simpleUserManagementFrontEnd
+      dockerfile: Dockerfile      
+    networks: 
+      - my-network    
+    ports:
+      - "3000:3000"
+    
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  mongodb:
+    driver: local

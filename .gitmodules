@@ -1,0 +1,6 @@
+[submodule "simpleUserManagementBackEnd"]
+	path = simpleUserManagementBackEnd
+	url = https://github.com/akeed669/simpleUserManagementBackEnd
+[submodule "simpleUserManagementFrontEnd"]
+	path = simpleUserManagementFrontEnd
+	url = https://github.com/akeed669/simpleUserManagementFrontEnd
