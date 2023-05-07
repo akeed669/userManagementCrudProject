@@ -1,14 +1,17 @@
-# Check the README file in the node server project (regarding environment file config)
+## Check the README file in the node server project (regarding environment file config)
 
-# Run the below commands to initialize the local configuration file and to fetch all the data from the linked projects
+### Clone the project into your local machine
 
-    git submodule init
-    git submodule update
+### Run the below commands to initialize the local configuration file and to fetch all the data from the linked projects
 
-# Run the below command to build, create/recrate the images and attach them to containers and create a network and volume as defined in the docker-compose.yml file
+#### git submodule init
 
-    docker-compose up --build
+#### git submodule update
 
-# Run the below command to stop and remove the containers, images, network and volume created by the up command
+### Run the below command to build, create/recrate the images and attach them to containers and create a network and volume as defined in the docker-compose.yml file
 
-    docker-compose down
+#### docker-compose up --build
+
+### Run the below command to stop and remove the containers, images, network and volume created by the up command
+
+#### docker-compose down
