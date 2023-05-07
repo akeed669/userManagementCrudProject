@@ -1,3 +1,5 @@
+# Check the README file in the node server project (regarding environment file config)
+
 # Run the below commands to initialize the local configuration file and to fetch all the data from the linked projects
 
     git submodule init
