@@ -1,3 +1,8 @@
+# Run the below commands to initialize the local configuration file and to fetch all the data from the linked projects
+
+    git submodule init
+    git submodule update
+
 # Run the below command to build, create/recrate the images and attach them to containers and create a network and volume as defined in the docker-compose.yml file
 
     docker-compose up --build
